@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SpumaDriver" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/baby_purple</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/baby_purple</item>
+        <item name="colorSecondaryVariant">@color/purple</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+<style name="Buttons">
+    "buttons">
+    <item name="android:layout_width">342dp</item>
+    <item name="android:layout_height">51dp</item>
+    <item name="android:textSize">18sp</item>
+    <item name="backgroundTint">@color/purple</item>
+    <item name="cornerRadius">6dp</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:fontFamily">@font/rubik_regular</item>
+    <item name="fontWeight">500</item>
+</style>
+
+ <style name="textView">
+<item name="android:layout_height">32dp</item>
+<item name="android:layout_width">225dp</item>
+<item name="lineHeight">32dp</item>
+<item name="android:textColor">@color/black</item>
+<item name="android:fontFamily">@font/rubik_regular</item>
+<item name="fontWeight">800</item>
+<item name="android:textSize">22sp</item>
+<item name="android:textStyle">bold</item>
+
+</style>
+</resources>
