@@ -35,23 +35,36 @@ class verifyActivity : AppCompatActivity() {
         textViewNumber.text = "+966$number"
 
       val retrofit = ServiceBuilder.buildService(ApiInterface::class.java)
-        val obj = RequestModel(number.toString(),lang,"SA",uid,"android")
 
-        retrofit.sendReq().enqueue(
-            object: Callback<ResponseModel> {
-                override fun onResponse(
-                    call: Call<ResponseModel>,
-                    response: Response<ResponseModel>
-                ) {
-                    Toast.makeText(this@verifyActivity,response.message().toString(),Toast.LENGTH_LONG).show()
-                }
-
-                override fun onFailure(call: Call<ResponseModel>, t: Throwable) {
-                    Toast.makeText(this@verifyActivity,t.toString(),Toast.LENGTH_LONG).show()
-                }
-
-            }
+        val devices = DeviceModel(
+            uid = uid,
+            type = "android"
         )
+
+        val driver = DriverModel(
+            mobile = number.toString()
+            ,lang = lang
+            , country_code = "SA"
+            ,devices = devices
+        )
+
+        val response = retrofit.driverlogin(driver).execute()
+        Toast.makeText(this@verifyActivity,response.message().toString(),Toast.LENGTH_LONG).show()
+
+//            object: Callback<DriverModel> {
+//                override fun onResponse(
+//                    call: Call<DriverModel>,
+//                    response: Response<DriverModel>
+//                ) {
+//                    Toast.makeText(this@verifyActivity,response.message().toString(),Toast.LENGTH_LONG).show()
+//                }
+//
+//                override fun onFailure(call: Call<DriverModel>, t: Throwable) {
+//                    Toast.makeText(this@verifyActivity,t.toString(),Toast.LENGTH_LONG).show()
+//                }
+//
+//            }
+//        )
         resendTv.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
