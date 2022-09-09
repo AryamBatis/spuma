@@ -11,8 +11,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
 import com.example.spumadriver.R
+import com.spuma.driver.services.ApiClient
 import com.spuma.driver.services.ApiInterface
-import com.spuma.driver.services.ServiceBuilder
 import kotlinx.android.synthetic.main.activity_verify.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,46 +25,59 @@ class verifyActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n", "HardwareIds")
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify)
+        System.out.println("#########################");
 
         val uid: String = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
         val lang = LocaleHelper().getLanguage(this)
         preferences = getSharedPreferences("phone_number", Context.MODE_PRIVATE)
         val number = preferences.getInt("NUMBER",0)
         textViewNumber.text = "+966$number"
+        System.out.println("*****************************");
 
-      val retrofit = ServiceBuilder.buildService(ApiInterface::class.java)
+      val retrofit = ApiClient.buildService(ApiInterface::class.java)
+        System.out.println("SSSSSSSSSSSSSSS");
 
-        val devices = DeviceModel(
+        val device = DeviceModel(
             uid = uid,
             type = "android"
         )
 
         val driver = DriverModel(
-            mobile = number.toString()
+            mobile = "966$number"
             ,lang = lang
             , country_code = "SA"
-            ,devices = devices
+            ,device = device
         )
+        System.out.println("RRRRRRRRRRRRRRRRRrrrr");
 
-        val response = retrofit.driverlogin(driver).execute()
-        Toast.makeText(this@verifyActivity,response.message().toString(),Toast.LENGTH_LONG).show()
+//
+//            val response = retrofit.driverlogin(body = driver).execute()
 
-//            object: Callback<DriverModel> {
-//                override fun onResponse(
-//                    call: Call<DriverModel>,
-//                    response: Response<DriverModel>
-//                ) {
-//                    Toast.makeText(this@verifyActivity,response.message().toString(),Toast.LENGTH_LONG).show()
-//                }
-//
-//                override fun onFailure(call: Call<DriverModel>, t: Throwable) {
-//                    Toast.makeText(this@verifyActivity,t.toString(),Toast.LENGTH_LONG).show()
-//                }
-//
-//            }
-//        )
+        System.out.println("MMMMMMMMMMMMMMMMMMMMMMMM");
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+            //API response
+
+                    retrofit.driverlogin(driver).enqueue(object: Callback<DriverModel> {
+                        override fun onResponse(
+                            call: Call<DriverModel>,
+                            response: Response<DriverModel>
+                        ) {
+                            System.out.println("REXXXXXXXXXXXXX" + response.body());
+
+                            Toast.makeText(this@verifyActivity,response.message().toString(),Toast.LENGTH_LONG).show()
+                        }
+
+                        override fun onFailure(call: Call<DriverModel>, t: Throwable) {
+                            Toast.makeText(this@verifyActivity,t.toString(),Toast.LENGTH_LONG).show()
+                        }
+
+                    }
+                )
         resendTv.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

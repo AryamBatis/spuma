@@ -2,21 +2,24 @@ package com.spuma.driver
 
 import java.sql.Date
 import java.time.LocalDateTime
+import kotlinx.serialization.*
 
+@Serializable
 data class DriverModel(
-    val email: String = "",
-    val id: Int = 0,
-    val lang: String = "",
-    val mobile: String = "",
-    val token: Any = "",
-    val token_expired_at: LocalDateTime = LocalDateTime.now(),
-    val username: String = "",
-    val country_code: String = "",
-    val devices: DeviceModel = DeviceModel(),
-    val type: String = ""
+    @SerialName("email") val email: String? = null,
+    @SerialName("id") val id: Int? = null,
+    @SerialName("lang") val lang: String? = null,
+    @SerialName("mobile") val mobile: String? = null,
+    @SerialName("token") val token: Any? = null,
+    @SerialName("token_expired_at") val token_expired_at: LocalDateTime? = null,
+    @SerialName("country_code") val username: String? = null,
+    @SerialName("email") val country_code: String? = null,
+    @SerialName("device") val device: DeviceModel? = null,
+    @SerialName("type") val type: String? = null,
 )
 
+@Serializable
 data class DeviceModel(
-        val uid: String = "",
-        val type: String = ""
+    @SerialName("uid") val uid: String? = null,
+    @SerialName("type") val type: String? = null
 )
