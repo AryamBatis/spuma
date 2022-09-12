@@ -4,7 +4,6 @@
     <string name="get_started">"ابدأ مع Spumã "</string>
     <string name="enter_phone">أدخل رقم هاتفك, لتحصل على رمز التفعيل وأستمتع.</string>
     <string name="phone_number">رقم الهاتف</string>
-    <string name="_5">5********</string>
     <string name="send_code">أرسل رمز التفعيل</string>
     <string name="verify_phone_number">تفعيل رقم الهاتف</string>
     <string name="enter_the_4_digit"> أدخل رمز التفعيل المكون من اربعة ارقام المرسل للرقم </string>

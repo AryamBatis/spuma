@@ -1,4 +1,4 @@
-package com.spuma.driver.services
+package com.spuma.driver
 
 import com.spuma.driver.DriverModel
 import retrofit2.Call
@@ -11,5 +11,5 @@ interface ApiInterface {
 
         @Headers("Content-type: application/json")
         @POST("api/v1/drivers/login")
-        fun driverlogin(@Body body: DriverModel): Call<DriverModel>
+        fun driverLogin(@Body body: DriverModel): Call<DriverModel>
 }

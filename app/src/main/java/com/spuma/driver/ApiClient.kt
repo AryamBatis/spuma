@@ -1,4 +1,4 @@
-package com.spuma.driver.services
+package com.spuma.driver
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
