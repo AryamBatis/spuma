@@ -3,11 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/drawable/ic_launcher_background.xml" value="0.192" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2475" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/drawable/ic_launcher_suadi_background.xml" value="0.175" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/drawable/logo.xml" value="0.192" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/drawable/suadi-logo_background.xml" value="0.175" />
         <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/layout-v26/activity_verify.xml" value="0.17346014492753623" />
-        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/layout/activity_login.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/layout/activity_main2.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/layout/activity_verify.xml" value="0.264" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/layout/logo.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1175" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_myapp.xml" value="0.108" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_myapp_round.xml" value="0.1" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1175" />
+        <entry key="..\:/Users/aryam/AndroidStudioProjects/SpumaDriver3/app/src/main/res/mipmap-anydpi-v26/suadi-logo.xml" value="0.1" />
       </map>
     </option>
   </component>

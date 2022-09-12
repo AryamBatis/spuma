@@ -6,12 +6,11 @@
     <string name="get_started">Get started with Spumã</string>
     <string name="enter_phone">Enter your phone number, get verified and enjoy.</string>
     <string name="phone_number">PHONE NUMBER</string>
-    <string name="_5">5********</string>
     <string name="send_code">SEND CODE</string>
     <string name="verify_phone_number">Verify Phone Number</string>
     <string name="enter_the_4_digit">Enter the 4-Digit code sent to you at</string>
     <string name="btn_continue">CONTINUE</string>
-    <string name="didnt_receive_code">Didn’t receive code?</string>
+    <string name="didnt_receive_code">Did not receive code?</string>
     <string name="resend_again">Resend Again.</string>
 
 </resources>

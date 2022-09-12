@@ -1,4 +1,4 @@
-package com.spuma.driver.services
+package com.spuma.driver
 
 import com.spuma.driver.DriverModel
 import mu.KotlinLogging
